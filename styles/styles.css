@@ -1,19 +1,19 @@
 body {
 	font-family: 'Quattrocento Sans', sans-serif;
 	background-image: linear-gradient(
-		to top,
-		#ffffff,
-		#fafafa,
-		#f5f5f5,
-		#f0f0f0,
-		#ebebeb,
-		#e6e6e6,
-		#e0e0e0,
-		#dbdbdb,
-		#d3d3d3,
-		#cbcbcb,
-		#c4c4c4,
-		#bcbcbc
+		to bottom,
+		#36393f,
+		#35373d,
+		#34363b,
+		#32343a,
+		#313338,
+		#333539,
+		#35363b,
+		#37383c,
+		#3d3d40,
+		#434345,
+		#484849,
+		#4e4e4e
 	);
 }
 header {
@@ -28,9 +28,8 @@ header {
 	font-size: 2rem;
 	font-weight: bolder;
 	font-variant: small-caps;
-	border-bottom: 0.1rem solid black;
+	border-bottom: 0.1rem solid rgb(255, 255, 255);
 	color: white;
-	text-shadow: #000000 0.1rem 0.2rem 0.5rem;
 }
 main {
 	width: 100vw;
@@ -46,8 +45,9 @@ footer {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 1rem;
-	font-weight: bolder;
-	border-top: 0.1rem solid black;
+	font-weight: lighter;
+	border-top: 0.1rem solid rgb(255, 255, 255);
+	color: rgb(255, 255, 255);
 }
 .container {
 	width: 100vw;
@@ -56,17 +56,11 @@ footer {
 .encriptador {
 	position: absolute;
 	top: 18vh;
-	left: 8vw;
+	left: 10vw;
 }
-.desencriptador {
-	position: absolute;
-	top: 18vh;
-	right: 8vw;
-}
-
 fieldset {
-	width: 40vw;
-	border-top: 0.1rem solid black;
+	width: 80vw;
+	border-top: 0.1rem solid rgb(255, 255, 255);
 }
 
 legend {
@@ -74,6 +68,7 @@ legend {
 	text-transform: uppercase;
 	text-align: center;
 	padding-bottom: 2rem;
+	color: white;
 }
 
 label {
@@ -82,15 +77,7 @@ label {
 	text-transform: lowercase;
 	text-align: center;
 	padding-bottom: 1rem;
-}
-
-textarea {
-	width: 100%;
-	padding-top: 2rem;
-	text-transform: lowercase;
-	text-align: center;
-	color: black;
-	font-size: 1.5rem;
+	color: white;
 }
 
 .button {
@@ -113,10 +100,16 @@ textarea {
 	color: #000000;
 	border: 0.1rem solid black;
 }
-#textoEncriptado,
-#textoDesencriptado {
+
+#desencriptarTexto,
+#encriptarTexto {
+	width: 49.8%;
+}
+
+#resultado,
+#inputArea {
 	width: 100%;
-	height: 6rem;
+	height: 10rem;
 	background: white;
 	text-transform: lowercase;
 	text-align: center;

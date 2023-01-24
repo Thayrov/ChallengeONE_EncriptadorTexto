@@ -19,47 +19,41 @@
 			<main>
 				<form>
 					<fieldset class="encriptador">
-						<legend>Encriptador</legend>
-						<label for="encriptar">Ingresa el texto que deseas encriptar</label>
-						<textarea
-							name="encriptar"
-							id="encriptar"
-							cols="30"
-							rows="3"
-							type=""></textarea>
+						<legend>Encriptador y Desencriptador</legend>
+
+						<label for="inputArea"
+							>Ingresa el texto que deseas encriptar o desencriptar</label
+						>
+
 						<input
+                            type="text"
+                            id="inputArea"
+                            pattern="[a-z]"
+                            title="Solo introducir letras minúsculas y sin acentuación."
+                            required>
+						</input>
+
+						<input
+							readonly
 							class="button"
 							id="encriptarTexto"
 							type="submit"
 							value="Encriptar Texto" />
-						<div><p id="textoEncriptado"></p></div>
+
 						<input
 							readonly
-							class="button"
-							id="copiarTextoEncriptado"
-							type="button"
-							value="Copiar texto" />
-					</fieldset>
-					<fieldset class="desencriptador">
-						<legend>Desencriptador</legend>
-						<label for="desencriptar"
-							>Ingresa el texto que deseas desencriptar</label
-						>
-						<textarea
-							name="desencriptar"
-							id="desencriptar"
-							cols="30"
-							rows="3"></textarea>
-						<input
 							class="button"
 							id="desencriptarTexto"
 							type="submit"
 							value="Desencriptar Texto" />
-						<div><p id="textoDesencriptado"></p></div>
+						<label for="resultado">Aquí veras el texto procesado</label>
+						<div><p id="resultado"></p></div>
+
 						<input
-							class="button"
-							id="copiarTextoDesencriptado"
-							type="submit"
+							readonly
+                            class="button"
+							id="copiarResultado"
+							type="button"
 							value="Copiar texto" />
 					</fieldset>
 				</form>

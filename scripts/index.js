@@ -2,43 +2,44 @@
 const encriptado = {e: 'enter', i: 'imes', a: 'ai', o: 'ober', u: 'ufat'};
 const desencriptado = {enter: 'e', imes: 'i', ai: 'a', ober: 'o', ufat: 'u'};
 
-//  Función que toma entrada de datos del usuario y los encripta
 const encriptarTexto = start => {
 	start.preventDefault();
-	let texto1 = document.getElementById('encriptar').value;
-	let textoEncriptado = texto1.replace(/[eiaou]/g, i => encriptado[i]);
-	document.getElementById('textoEncriptado').innerHTML = textoEncriptado;
+	var inputUsuario = document.getElementById('inputArea').value;
+	var resultadoEncriptado = inputUsuario.replace(
+		/[eiaou]/g,
+		i => encriptado[i],
+	);
+	document.getElementById('resultado').innerHTML = resultadoEncriptado;
 };
-//  Evento para activar función encriptarTexto()
+
+const desencriptarTexto = start => {
+	start.preventDefault();
+	var inputUsuario = document.getElementById('inputArea').value;
+	var resultadoDesencriptado = inputUsuario.replace(
+		/(enter)+|(imes)+|(ai)+|(ober)+|(ufat)+/g,
+		i => desencriptado[i],
+	);
+	document.getElementById('resultado').innerHTML = resultadoDesencriptado;
+};
+
+//  Eventos para activar función cambiarTexto()
 document.addEventListener('DOMContentLoaded', () => {
 	document
 		.getElementById('encriptarTexto')
 		.addEventListener('click', encriptarTexto);
 });
 
-//  Función que toma entrada de datos del usuario y los desencripta
-const desencriptarTexto = start => {
-	start.preventDefault();
-	let texto2 = document.getElementById('desencriptar').value;
-	let textoDesencriptado = texto2.replace(
-		/(enter)+|(imes)+|(ai)+|(ober)+|(ufat)+/g,
-		i => desencriptado[i],
-	);
-	document.getElementById('textoDesencriptado').innerHTML = textoDesencriptado;
-};
-//  Evento para activar función desencriptarTexto()
 document.addEventListener('DOMContentLoaded', () => {
 	document
 		.getElementById('desencriptarTexto')
 		.addEventListener('click', desencriptarTexto);
 });
-//  Función que copia texto encriptado
+//  Función que copia el resultado
 const copy = () => {
-	var input = document.getElementById('textoEncriptado').innerText;
-	navigator.clipboard.writeText(input);
+	var resultado = document.getElementById('resultado').innerText;
+	navigator.clipboard.writeText(resultado);
+	document.getElementById('resultado').reset();
 };
 
 //Evento para ejecutar función copy()
-document
-	.getElementById('copiarTextoEncriptado')
-	.addEventListener('click', copy);
+document.getElementById('copiarResultado').addEventListener('click', copy);
