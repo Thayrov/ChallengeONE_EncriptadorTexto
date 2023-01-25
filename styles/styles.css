@@ -140,11 +140,11 @@ label {
 		left: auto;
 		margin: 0 auto;
 	}
-	.desencriptador {
-		position: relative;
-		top: 18vh;
-		right: auto;
-		margin: 0 auto;
+    #desencriptarTexto,
+    #encriptarTexto {
+        font-size: 0.8rem;
+        width: 49%;
+    }
 	}
 	fieldset {
 		width: 80vw;

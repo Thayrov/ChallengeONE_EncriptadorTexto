@@ -21,17 +21,15 @@
 					<fieldset class="encriptador">
 						<legend>Encriptador y Desencriptador</legend>
 
-						<label for="inputArea"
-							>Ingresa el texto que deseas encriptar o desencriptar</label
-						>
+						<label for="inputArea">Ingresa el texto que deseas procesar</label>
 
 						<input
-                            type="text"
-                            id="inputArea"
-                            pattern="[a-z]"
-                            title="Solo introducir letras minúsculas y sin acentuación."
-                            required>
-						</input>
+							type="text"
+							id="inputArea"
+							pattern="[a-z]+"
+							wraptype="textarea"
+							title="Solo introducir letras minúsculas y sin acentuación."
+							required />
 
 						<input
 							readonly
@@ -51,7 +49,7 @@
 
 						<input
 							readonly
-                            class="button"
+							class="button"
 							id="copiarResultado"
 							type="button"
 							value="Copiar texto" />
