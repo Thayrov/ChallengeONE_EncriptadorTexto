@@ -94,16 +94,21 @@ label {
 	margin-bottom: 4rem;
 	border-radius: 5px;
 	transition: 1000;
+	margin-left: 0.5rem;
+	margin-right: 0.5rem;
 }
 .button:hover {
 	background-color: #bcbcbc;
 	color: #000000;
 	border: 0.1rem solid black;
 }
+#copiarResultado {
+	width: 99%;
+}
 
 #desencriptarTexto,
 #encriptarTexto {
-	width: 49.8%;
+	width: 48.6%;
 }
 
 #resultado,
@@ -140,10 +145,13 @@ label {
 		left: auto;
 		margin: 0 auto;
 	}
+	#copiarResultado {
+		width: 95%;
+	}
 	#desencriptarTexto,
 	#encriptarTexto {
 		font-size: 0.8rem;
-		width: 49%;
+		width: 44%;
 	}
 	fieldset {
 		width: 80vw;
